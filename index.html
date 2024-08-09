@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="./img/DeliveryIcon.png">
+    <title>Lieferando</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="arrays.js"></script>
+    <script src="script.js"></script>
+    <script src="scriptHtml.js"></script>
+    <script src="language.js"></script>
+</head>
+
+<body onload="render()">
+    <header>
+        <div class="HeadLogo"><img src="./img/DeliveryIcon.png" alt="">Lieferando</div>
+        <p id="headline" class="headerText">Speisekarte</p>
+        <div class="optionContainer">
+            <img onclick="openChoiseLanguage()" class="menuIcon" src="./img/menu-icon-black.png" alt="">
+        </div>
+
+        <div id="choiseLanguageContainer" class="choiseLanguageContainer d-none">
+            <img onclick="DE()" class="languageImg" src="./img/germany-flag.png" alt="">
+            <img onclick="EN()" class="languageImg" src="./img/english-flag.png" alt="">
+        </div>
+    </header>
+
+    <section class="mainContainer">
+        <section id="ChoiceFoodContainer" class="ChoiceFoodContainer d-flex">
+            <img class="HeadImg" src="./img/headImg.jpg" alt="">
+            <img class="restaurantLogo" src="./img/chili-logo.png" alt="">
+            <p class="restaurantName">Amigo's Kitchen
+            <div class="starsBox">
+                <img class="starsIcon" src="./img/stars.png" alt="">
+                <img class="starsIcon" src="./img/stars.png" alt="">
+                <img class="starsIcon" src="./img/stars.png" alt="">
+                <img class="starsIcon" src="./img/stars.png" alt="">
+                <img class="starsIcon" src="./img/stars.png" alt="">
+            </div>
+            </p>
+
+            <div id="Mexican" class="foodNavbar">
+                <a class="navLink" href="#Mexican">Mexican</a>
+                <a class="navLink" href="#Pizzas">Pizzas</a>
+                <a class="navLink" href="#Burgers">Burgers</a>
+                <a id="fries" class="navLink" href="#Pommes">Pommes</a>
+                <a id="salads" class="navLink" href="#Salate">Salate</a>
+                <a class="navLink" href="#Desserts">Desserts</a>
+            </div>
+
+        </section>
+
+        <section id="basketContainer" class="basketContainer d-none-mobile">
+            <div class="basketHead">
+                <h2 id="ShoppingBasket">Warenkorb</h2>
+                <button onclick="openCloseBasketMobile()" class="basketCloseBt">X</button>
+                <div class="timeBox">
+                    <div id="deliveryBox" class="deliveryTimeBox" onclick="deliveryChoice()">
+                        <p id="deliverText" class="timeHeadText">Lieferung</p>
+                        <span class="timeText">30-55 min</span>
+                    </div>
+                    <div id="pickUpBox" class="pickUpTimeBox" onclick="pickUpChoice()">
+                        <p id="pickUpText" class="timeHeadText">Abholung</p>
+                        <span class="timeText">15-20 min</span>
+                    </div>
+                </div>
+
+                <div id="basketInfo" class="basketInfo">
+                    <img class="bagIcon" src="./img/shopping-bag-icon.png" alt="">
+                    <h2 id="basketinfo1">Fülle deinen Warenkorb</h2>
+                    <p id="basketinfo2">Füge einige leckere Gerichte aus der <br> Speisekarte hinzu und bestelle dein
+                        Essen.</p>
+                </div>
+
+                <div class="basketBox">
+                    <div id="basketChoise" class="basketChoise">
+                    </div>
+
+                    <div id="basketSumContainer" class="basketSumContainer">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="successfulOrderContainer" class="successfulOrderContainer d-none">
+            <div onclick="successOrder()" class="successfulOrderBox">
+                <p class="successOrderText">Vielen Dank für Deine Bestellung !</p>
+                <img class="successOrderImg" src="./img/delivery.png" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="mobileBasketContainer">
+        <button onclick="openCloseBasketMobile()" class="mobileBasketBt">
+            <p id="mobileShoppingBasket">Warenkorb</p>
+            <div id="basketAmount" class="basketAmount"></div>
+        </button>
+
+    </section>
+
+    <footer>
+        <div class="footerInfoBox">
+            <a class="infoText" href="#">Lieferando</a>
+            <a class="infoText" id="dataProtection" target="_blank" href="datenschutz.html">Datenschutzerklärung</a>
+            <a class="infoText" id="imprint" target="_blank" href="impressum.html">Impressum</a>
+        </div>
+        <div>
+            <p>© 2024 Lieferando</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
